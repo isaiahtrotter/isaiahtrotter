@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: isaiahtrotter/isaiahtrotter
   branch: main # Or master if that's your default branch
   auth:
