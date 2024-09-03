@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: isaiahtrotter/isaiahtrotter
+  branch: main # Or master if that's your default branch
+
+media_folder: "assets/images/uploads" # Folder where images will be uploaded
+public_folder: "/assets/images/uploads" # Public path for the images
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
